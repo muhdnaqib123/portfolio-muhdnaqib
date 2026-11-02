@@ -72,9 +72,14 @@ h1 em{font-style:normal;color:var(--accent)}
 .step .no{font-family:Sora,sans-serif;font-weight:800;font-size:20px}
 .step h3{font-family:Sora,sans-serif;font-size:16px;margin:2px 0 3px}
 .step p{font-size:14px;color:var(--muted);margin:0;line-height:1.55}
-.faq{padding:12px 0;border-bottom:1px solid var(--line)}
+.faq{border-bottom:1px solid var(--line)}
+.faq summary{font-family:Sora,sans-serif;font-size:16px;font-weight:700;padding:14px 28px 14px 0;cursor:pointer;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:12px;font-size:20px;font-weight:600;color:var(--accent)}
+.faq details[open ] summary::after{content:"−"}
+.faq details[open ] summary{padding-bottom:6px}
+.faq details p{padding:0 0 14px}
 .faq:last-of-type{border-bottom:0}
-.faq b{font-family:Sora,sans-serif;font-size:16px;display:block;margin-bottom:3px}
 .faq p{font-size:14px;color:var(--muted);margin:0;line-height:1.55}
 .big-cta{background:var(--accent);color:#fff;text-align:center;padding:22px 18px;margin-top:24px}
 .big-cta h2{font-family:Sora,sans-serif;font-size:24px;margin:0 0 6px}
@@ -151,12 +156,13 @@ h1 em{font-style:normal;color:var(--accent)}
   <div class="step"><div class="no">4</div><div><h3>Bot mula kerja</h3><p>Saya serahkan bot dan ajar cara guna serta cara tukar harga atau senarai produk sendiri.</p></div></div>
 
   <hr class="hr">
-  <div class="sec-head"><h2>Soalan lazim</h2><span>FAQ</span></div>
-  <div class="faq"><b>Bot ni kena untuk bisnes saja ke?</b><p>Tak. Untuk reseller boleh, untuk group kawan kawan pun boleh, untuk kegunaan sendiri pun boleh. Asalkan awak tahu bot tu nak buat apa, saya cuba buatkan.</p></div>
-  <div class="faq"><b>Pelanggan saya kena install benda lain ke?</b><p>Tak payah. Telegram yang dah ada dalam telefon mereka tu dah cukup. Tekan link bot, terus boleh guna.</p></div>
-  <div class="faq"><b>Berapa lama bot saya nak siap?</b><p>Bot yang ringkas biasanya siap dalam beberapa hari. Kalau fungsi dia banyak, saya beritahu jangkaan masa sebelum mula.</p></div>
-  <div class="faq"><b>Lepas siap, boleh tukar harga atau produk sendiri ke?</b><p>Boleh. Masa serahan saya tunjuk satu satu cara tukar benda benda asas tu.</p></div>
-  <div class="faq"><b>Bot ni ganti saya terus ke?</b><p>Tak. Bot tolong yang berulang dan membosankan saja. Kalau pelanggan nak cakap hal penting, awak yang layan.</p></div>
+  <div class="sec-head"><h2>Soalan lazim</h2><span>Tekan untuk buka</span></div>
+  <div class="faq"><details><summary>Bot ni kena untuk bisnes saja ke?</summary><p>Tak. Untuk reseller boleh, untuk group kawan kawan pun boleh, untuk kegunaan sendiri pun boleh. Asalkan awak tahu bot tu nak buat apa, saya cuba buatkan.</p></details></div>
+  <div class="faq"><details><summary>Pelanggan saya kena install benda lain ke?</summary><p>Tak payah. Telegram yang dah ada dalam telefon mereka tu dah cukup. Tekan link bot, terus boleh guna.</p></details></div>
+  <div class="faq"><details><summary>Berapa lama bot saya nak siap?</summary><p>Bot yang ringkas biasanya siap dalam beberapa hari. Kalau fungsi dia banyak, saya beritahu jangkaan masa sebelum mula.</p></details></div>
+  <div class="faq"><details><summary>Lepas siap, boleh tukar harga atau produk sendiri ke?</summary><p>Boleh. Masa serahan saya tunjuk satu satu cara tukar benda benda asas tu.</p></details></div>
+  <div class="faq"><details><summary>Kalau saya nak ubah atau tambah fungsi kemudian?</summary><p>Ubah teks dan maklumat asas sebelum serahan termasuk dalam harga. Kalau lepas skop dipersetujui awak nak tambah fungsi atau tukar cara bot bekerja, saya beritahu harga tambahan dulu sebelum buat, jadi awak boleh putuskan dulu.</p></details></div>
+  <div class="faq"><details><summary>Bot ni ganti saya terus ke?</summary><p>Tak. Bot tolong yang berulang dan membosankan saja. Kalau pelanggan nak cakap hal penting, awak yang layan.</p></details></div>
 
   <div class="big-cta">
     <h2>Terfikir bot apa yang bisnes awak perlu?</h2>

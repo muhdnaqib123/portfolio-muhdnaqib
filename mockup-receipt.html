@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup Resit - Muhd Naqib</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#23231f;--paper:#fbfaf5;--ink:#191915;--muted:#77746a;--accent:#1a4d2e;--line:#d9d6ca}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:"JetBrains Mono",monospace;color:var(--ink);min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:28px 18px 34px;background-image:radial-gradient(rgba(255,255,255,.055) 1px,transparent 1px);background-size:22px 22px}
+.topbar{width:min(560px,100%);display:flex;justify-content:space-between;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#a8a59a;padding-bottom:16px}
+.topbar b{color:#f2f0e8}
+
+/* Receipt paper with torn edges */
+.receipt{width:min(560px,100%);background:var(--paper);padding:34px 34px 28px;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+.receipt::before,.receipt::after{content:"";position:absolute;left:0;right:0;height:12px;background:linear-gradient(-45deg,transparent 8px,var(--paper) 0) 0 0/16px 16px repeat-x,linear-gradient(45deg,transparent 8px,var(--paper) 0) 8px 0/16px 16px repeat-x}
+.receipt::before{top:-11px;transform:scaleY(-1)}
+.receipt::after{bottom:-11px}
+
+.shop{text-align:center}
+.shop .mark{display:inline-grid;place-items:center;width:52px;height:52px;border:2px solid var(--ink);border-radius:50%;font-family:Sora,sans-serif;font-weight:800;font-size:17px;margin-bottom:12px}
+h1{font-family:Sora,sans-serif;font-size:34px;letter-spacing:-.02em;line-height:1;margin:0;text-transform:uppercase}
+.shop p{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:9px 0 0;line-height:1.7}
+.meta{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;border-top:1.5px dashed var(--ink);border-bottom:1.5px dashed var(--ink);padding:10px 0;margin:20px 0 4px}
+.profile{display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.profile img{width:74px;height:82px;object-fit:cover;object-position:center 20%;border-radius:8px;filter:grayscale(15%)}
+.profile h2{font-family:Sora,sans-serif;font-size:19px;margin:0 0 4px}
+.profile p{font-size:12px;color:var(--muted);margin:0;line-height:1.6}
+.sec{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:20px 0 8px;display:flex;justify-content:space-between}
+.sec span:last-child{color:var(--muted);font-weight:400}
+.item{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px dotted var(--line);font-size:13.5px}
+.item b{font-weight:700}
+.item small{display:block;color:var(--muted);font-size:11.5px;margin-top:3px;line-height:1.5;font-weight:400}
+.price{font-weight:700;white-space:nowrap;font-size:12.5px}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:1.5px dashed var(--ink);margin-top:16px;padding-top:14px}
+.total .label{font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.total .value{font-family:Sora,sans-serif;font-size:21px;font-weight:800}
+.thanks{text-align:center;font-size:12px;line-height:1.8;color:#44423b;margin:18px 0 4px}
+.thanks b{color:var(--ink)}
+/* Fake barcode made of real divs is avoided: use repeating gradient strip clearly as design element */
+.barcode{height:52px;margin:14px auto 6px;max-width:340px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 6px,transparent 6px 11px,var(--ink) 11px 14px,transparent 14px 17px)}
+.code{text-align:center;font-size:11px;letter-spacing:.28em;color:var(--muted)}
+.actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:20px}
+.actions a{text-align:center;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:13px 8px;border:1.5px solid var(--ink);color:var(--ink)}
+.actions a:first-child{background:var(--accent);border-color:var(--accent);color:#fff}
+.foot{width:min(560px,100%);text-align:center;color:#8f8c81;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding-top:24px;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="topbar"><span><b>muhdnaqib.my.id</b></span><span>Mockup 01 - Resit</span></div>
+
+<div class="receipt">
+  <div class="shop">
+    <div class="mark">DN</div>
+    <h1>Danial Works</h1>
+    <p>Media Sosial / Promosi / Automasi<br>Klang - Shah Alam, Selangor</p>
+  </div>
+
+  <div class="meta"><span>Resit No. 001</span><span>Portfolio</span><span>MY</span></div>
+
+  <div class="profile">
+    <img src="danial-wide.jpg" alt="Danial">
+    <div>
+      <h2>Muhd Naqib (Danial)</h2>
+      <p>Peniaga dan pemasar media sosial untuk bisnes tempatan. Instagram @naqibstagram.</p>
+    </div>
+  </div>
+
+  <div class="sec"><span>Servis</span><span>Qty</span></div>
+  <div class="item"><span><b>Content</b><small>Idea dan jadual posting Instagram dan Threads</small></span><span class="price">01</span></div>
+  <div class="item"><span><b>Kempen Promo</b><small>Copy promosi produk, fokus pertanyaan dan leads</small></span><span class="price">01</span></div>
+  <div class="item"><span><b>Lead Monitoring</b><small>Pantau kata kunci, cari pelanggan berpotensi</small></span><span class="price">01</span></div>
+  <div class="item"><span><b>Automasi</b><small>Alat posting dan kerja ulangan bisnes</small></span><span class="price">01</span></div>
+
+  <div class="sec"><span>Kerja Lepas</span><span>Status</span></div>
+  <div class="item"><span><b>LG Subscribe Promo</b><small>Kempen Instagram, caption Melayu dan English</small></span><span class="price">Siap</span></div>
+  <div class="item"><span><b>Bot Posting</b><small>Sistem posting media sosial automatik</small></span><span class="price">Aktif</span></div>
+
+  <div class="total"><span class="label">Jumlah perlu dibayar</span><span class="value">WHATSAPP JE</span></div>
+
+  <p class="thanks"><b>Terima kasih sebab singgah.</b><br>Untuk promosi produk atau urus media sosial,<br>tekan butang bawah dan mesej terus.</p>
+
+  <div class="barcode" aria-hidden="true"></div>
+  <div class="code">MUHDNAQIB.MY.ID</div>
+
+  <div class="actions">
+    <a href="#">WhatsApp</a>
+    <a href="#">Instagram</a>
+    <a href="#">GitHub</a>
+  </div>
+</div>
+
+<div class="foot">Satu skrin. Tak perlu scroll panjang.<br>Simpan resit ni.</div>
+</body>
+</html>

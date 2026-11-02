@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup Resit x Hermes - Muhd Naqib</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@600;700;800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#171713;--paper:#fcfbf6;--ink:#171713;--muted:#76736a;--accent:#1a4d2e;--line:#ddd9cc;--soft:#f3f1e8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif;min-height:100dvh;padding:26px 18px 36px}
+.topbar{max-width:620px;margin:0 auto;display:flex;justify-content:space-between;gap:16px;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#aaa79e;padding-bottom:16px}
+.topbar b{color:#f4f2ea}
+.receipt{max-width:620px;margin:0 auto;background:var(--paper);padding:36px 38px 30px;position:relative;box-shadow:0 28px 80px rgba(0,0,0,.52)}
+.receipt::before,.receipt::after{content:"";position:absolute;left:0;right:0;height:12px;background:linear-gradient(-45deg,transparent 8px,var(--paper) 0) 0 0/16px 16px repeat-x,linear-gradient(45deg,transparent 8px,var(--paper) 0) 8px 0/16px 16px repeat-x}
+.receipt::before{top:-11px;transform:scaleY(-1)}
+.receipt::after{bottom:-11px}
+.brand{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.mark{width:50px;height:50px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:Sora,sans-serif;font-weight:800;font-size:16px;flex:none}
+.brandno{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:right;line-height:1.8}
+.kicker{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:26px 0 12px;font-weight:700}
+h1{font-family:Sora,sans-serif;font-size:clamp(38px,8vw,56px);line-height:.96;letter-spacing:-.035em;margin:0;font-weight:800}
+h1 span{display:block;color:var(--muted);font-weight:600;font-size:.46em;letter-spacing:-.02em;margin-top:8px}
+.lead{font-size:17px;line-height:1.55;color:#3f3e37;max-width:48ch;margin:16px 0 20px}
+.profile{display:flex;gap:16px;align-items:center;background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:14px}
+.profile img{width:72px;height:80px;object-fit:cover;object-position:center 20%;border-radius:10px}
+.profile h2{font-family:Sora,sans-serif;font-size:18px;margin:0 0 3px}
+.profile p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.hr{border:0;border-top:1.5px dashed var(--ink);margin:24px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.sec-head h2{font-family:Sora,sans-serif;font-size:21px;margin:0;letter-spacing:-.01em}
+.sec-head span{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cap{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid var(--line)}
+.cap:last-of-type{border-bottom:0}
+.cap .no{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent);font-weight:700;padding-top:2px}
+.cap h3{font-family:Sora,sans-serif;font-size:18px;margin:0 0 4px}
+.cap p{font-size:14.5px;line-height:1.55;color:var(--muted);margin:0}
+.work{padding:13px 0;border-bottom:1px dotted var(--line);display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.work b{font-family:Sora,sans-serif;font-size:16px;display:block;margin-bottom:2px}
+.work small{color:var(--muted);line-height:1.5;display:block}
+.status{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);white-space:nowrap;padding-top:3px}
+.faq{padding:12px 0;border-bottom:1px solid var(--line)}
+.faq:last-of-type{border-bottom:0}
+.faq b{font-family:Sora,sans-serif;font-size:16px;display:block;margin-bottom:3px}
+.faq p{font-size:14px;color:var(--muted);margin:0;line-height:1.55}
+.total{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.total .label{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.total .value{font-family:Sora,sans-serif;font-size:23px;font-weight:800;text-align:right}
+.barcode{height:50px;margin:18px auto 6px;max-width:360px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 6px,transparent 6px 11px,var(--ink) 11px 14px,transparent 14px 17px)}
+.code{text-align:center;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.28em;color:var(--muted)}
+.actions{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px;margin-top:20px}
+.actions a{text-align:center;text-decoration:none;font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:14px 8px;border:1.5px solid var(--ink);color:var(--ink)}
+.actions a:first-child{background:var(--accent);border-color:var(--accent);color:#fff}
+.note{text-align:center;font-size:12.5px;color:var(--muted);line-height:1.7;margin:16px 0 0}
+.foot{max-width:620px;margin:0 auto;text-align:center;color:#8f8c81;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding-top:26px;line-height:1.9}
+@media(max-width:560px){.receipt{padding:28px 22px 24px}.brandno{display:none}.actions{grid-template-columns:1fr}.profile{align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="topbar"><span><b>muhdnaqib.my.id</b></span><span>Mockup Resit x Hermes</span></div>
+
+<article class="receipt">
+  <div class="brand">
+    <div class="mark">DN</div>
+    <div class="brandno">Resit Portfolio<br>Klang / Shah Alam<br>Selangor, MY</div>
+  </div>
+
+  <p class="kicker">The seller that grows with you</p>
+  <h1>Muhd Naqib <span>Danial</span></h1>
+  <p class="lead">Peniaga dan pemasar media sosial. Saya buat kandungan dan kempen yang bawa pertanyaan, leads, dan jualan untuk bisnes tempatan.</p>
+
+  <div class="profile">
+    <img src="danial-wide.jpg" alt="Foto Danial">
+    <div>
+      <h2>Danial</h2>
+      <p>Social Seller &amp; Marketer. Instagram @naqibstagram. Fokus pada Instagram, Threads, dan automasi kerja jualan.</p>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <div class="sec-head"><h2>Capabilities</h2><span>04 perkara</span></div>
+  <div class="cap"><span class="no">01</span><div><h3>Connect</h3><p>Jumpa pelanggan di Instagram dan Threads, tempat mereka memang luangkan masa setiap hari.</p></div></div>
+  <div class="cap"><span class="no">02</span><div><h3>Create</h3><p>Idea kandungan, copy promosi, dan jadual posting yang konsisten untuk produk awak.</p></div></div>
+  <div class="cap"><span class="no">03</span><div><h3>Monitor</h3><p>Pantau kata kunci dan perbualan awam untuk cari orang yang sedang mencari produk.</p></div></div>
+  <div class="cap"><span class="no">04</span><div><h3>Automate</h3><p>Alat ringkas untuk posting dan kerja ulangan, supaya masa fokus pada layan pelanggan dan jualan.</p></div></div>
+
+  <hr class="hr">
+
+  <div class="sec-head"><h2>Kerja lepas</h2><span>Status</span></div>
+  <div class="work"><span><b>Kempen Promo LG Subscribe</b><small>Promosi peralatan rumah di Instagram, caption Melayu dan English.</small></span><span class="status">Siap</span></div>
+  <div class="work"><span><b>Kandungan Instagram dan Threads</b><small>Perancangan kandungan dan copywriting promosi harian.</small></span><span class="status">Aktif</span></div>
+  <div class="work"><span><b>Alat Automasi Bisnes</b><small>Bot posting dan sistem ringkas untuk urusan jualan.</small></span><span class="status">Aktif</span></div>
+
+  <hr class="hr">
+
+  <div class="sec-head"><h2>Soalan biasa</h2><span>FAQ</span></div>
+  <div class="faq"><b>Boleh urus content bulanan?</b><p>Boleh. Kita mula dengan jadual posting dan jenis kandungan yang sesuai dengan produk.</p></div>
+  <div class="faq"><b>Boleh buat promosi produk sahaja?</b><p>Boleh. Beri detail produk dan tawaran, saya susun copy dan cadangan posting.</p></div>
+  <div class="faq"><b>Macam mana nak mula?</b><p>Mesej WhatsApp dan cerita produk awak. Lepas tu kita bincang langkah paling sesuai.</p></div>
+
+  <hr class="hr">
+
+  <div class="total"><span class="label">Jumlah perlu dibayar</span><span class="value">WHATSAPP JE</span></div>
+  <div class="barcode" aria-hidden="true"></div>
+  <div class="code">MUHDNAQIB.MY.ID</div>
+
+  <div class="actions">
+    <a href="#">WhatsApp</a>
+    <a href="#">Instagram</a>
+    <a href="#">GitHub</a>
+  </div>
+  <p class="note">Terima kasih sebab singgah. Simpan resit ni, mesej bila perlu.</p>
+</article>
+
+<div class="foot">Satu resit. Semua maklumat.<br>Tak perlu scroll panjang.</div>
+</body>
+</html>
